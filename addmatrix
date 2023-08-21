@@ -1,0 +1,43 @@
+package javalab;
+import java.util.*;
+
+public class Add {
+
+	public static void main(String[] args)
+	{
+		int i,j,n;
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter the no of r and col");
+		n=ob.nextInt();
+		int a[][]=new int[10][10];
+		int b[][]=new int[10][10];
+		System.out.println("enter 1st mat");
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+				a[i][j]=ob.nextInt();
+		System.out.println("enter 2nd mat");
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+				b[i][j]=ob.nextInt();
+		Add c=new Add();
+		c.sum(a,b,n);
+	}
+	public static void sum(int a[][],int b[][],int n)
+	{
+		int i,j;
+		int c[][]=new int[10][10];
+		System.out.println("the sum is");
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+				c[i][j]=a[i][j]+b[i][j];
+		for(i=0;i<n;i++)
+		{
+			System.out.println("");
+			for(j=0;j<n;j++)
+			{
+				System.out.print(" "+c[i][j]);
+			}
+		}
+	}
+
+}
