@@ -1,0 +1,69 @@
+package javalab;
+import java.util.*;
+public class Over 
+{
+	public void func()
+	   {
+			int i,j=0,k=0,n;
+			Scanner ob=new Scanner(System.in);
+			System.out.println("enter no of elements");
+			n=ob.nextInt();
+			int a[]=new int[n];
+			int b[]=new int[n];
+			int c[]=new int[n];
+			System.out.println("enter the elements");
+			for(i=0;i<n;i++)
+				a[i]=ob.nextInt();
+			for(i=0;i<n;i++)
+				if(a[i]%2==0)
+				{
+					b[j]=a[i];
+					j++;
+				}
+				else
+				{
+					c[k]=a[i];
+					k++;
+				}
+			System.out.println("elements are even");
+			for(i=0;i<j;i++)
+			System.out.println(" "+b[i]);
+			System.out.println("elements are odd");
+			for(i=0;i<k;i++)
+		    System.out.println(""+c[i]);
+	}
+}
+
+ class mat extends Over
+ {
+	public void func() 
+	{
+		int i,j,n;
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter the no of row and col");
+		n=ob.nextInt();
+		int a[][]=new int[10][10];
+		System.out.println("enter the elements");
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+				a[i][j]=ob.nextInt();
+		System.out.println("transpose is");
+		for(i=0;i<n;i++)
+		{
+			System.out.println("");
+			for(j=0;j<n;j++)
+			{
+				System.out.print(" "+a[j][i]);
+			}
+		}
+		super.func();
+	}
+
+	public static void main(String[] args) 
+	{
+		mat ob=new mat();
+		ob.func();
+	}
+
+}
+
