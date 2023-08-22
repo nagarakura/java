@@ -1,0 +1,32 @@
+package javalab;
+import java.util.Scanner;
+public class Pyramid 
+{
+	public static void main(String[] args) 
+	{
+		int n,i,j,k,a;
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter the level");
+		n=ob.nextInt();
+		for(i=1;i<n+1;i++)
+		{
+			for(j=i;j<n;j++)
+			{
+				System.out.print("\t");
+			}
+			for(k=i;k<=2*i-1;k++)
+			{
+				System.out.print(k+"\t");
+			}
+			for(a=2*i-2;a>=i;a--)
+			{
+				System.out.print(a+"\t");
+			}
+			System.out.println("\n");
+		}
+	}
+		
+}
+
+
+
